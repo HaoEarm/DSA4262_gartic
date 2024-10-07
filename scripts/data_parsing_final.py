@@ -49,7 +49,7 @@ merged_df = pd.merge(
     right_on=['ENST_ID', 'Position'],                  # Columns from df2
     how='inner'                                        # Choose 'inner', 'outer', 'left', or 'right' as needed
 )
-
+merged_df = merged_df.drop(columns=['transcript_position', 'transcript_id'])
 # Optional: View the merged DataFrame
 print(merged_df)
 
