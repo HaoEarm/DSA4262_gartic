@@ -8,15 +8,15 @@
     <li>
       <a href="#getting-started">Getting Started</a>
       <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
+        <li>Prerequisites</a></li>
+        <li>Installation</a></li>
       </ul>
     </li>
     <li><a href="#usage">Usage</a></li>
       <ul>
-        <li><a href="#prerequisites">Parsing the data</a></li>
-        <li><a href="#installation">Training the model</a></li>
-        <li><a href="#installation">Running predictions</a></li>
+        <li>Parsing the data</a></li>
+        <li>Training the model</a></li>
+        <li>Running predictions</a></li>
       </ul>
   </ol>
 </details>
