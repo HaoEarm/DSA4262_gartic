@@ -63,7 +63,7 @@ After creating your AWS EC2 instance,
 
 * Install the prerequisites libraries with Pip
   ```sh
-  pip install json pandas numpy scikit-learn imbalanced-learn joblib
+  pip install pandas numpy scikit-learn imbalanced-learn joblib
   ```
 
 ### Installation
