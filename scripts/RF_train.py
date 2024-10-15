@@ -20,13 +20,13 @@ val_data  = pd.read_csv('../Data/val_data.csv')
 
 # Drop features that are not needed / redundant
 # Split into X and y (Features and Label)
-X_train = train_data.drop(columns=['label','gene_id','transcript_id','Key'])
+X_train = train_data.drop(columns=['label','gene_id','transcript_id','Key','gene_id_encoded'])
 y_train = train_data['label']
 
-X_val = val_data.drop(columns=['label','gene_id','transcript_id','Key'])
+X_val = val_data.drop(columns=['label','gene_id','transcript_id','Key','gene_id_encoded'])
 y_val = val_data['label']
 
-X_test = test_data.drop(columns=['label','gene_id','transcript_id','Key'])
+X_test = test_data.drop(columns=['label','gene_id','transcript_id','Key','gene_id_encoded'])
 y_test = test_data['label']
 
 # Addressing class imbalance in the Dataset using SMOTE + class weight + scale
