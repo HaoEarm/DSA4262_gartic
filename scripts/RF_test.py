@@ -21,7 +21,7 @@ scaler = joblib.load(filename2)
 df = pd.read_csv('../Data/test_data.csv') # Uses the original test data from Task 1
 
 # Drop features that are not needed / redundant
-X = df.drop(columns=['label','gene_id','transcript_id','Key'])
+X = df.drop(columns=['label','gene_id','transcript_id','Key','gene_id_encoded'])
 
 # Scale new input data
 X_scaled = scaler.transform(X)
