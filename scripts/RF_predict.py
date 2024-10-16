@@ -9,7 +9,7 @@ import os
 # Loading the pretrained Random Forest Model
 dirname = os.path.dirname(__file__) # Path to this predict.py
 filename = os.path.join(dirname, '../model/random_forest.joblib') # Relative path to model folder
-rf = joblib.load(rf, filename)
+rf = joblib.load(filename)
 
 # Loading scaler used from training
 filename2 = os.path.join(dirname, '../model/scaler.joblib') # Relative path to model folder
