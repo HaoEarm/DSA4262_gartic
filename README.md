@@ -82,7 +82,7 @@ After creating your AWS EC2 instance,
 ### Training the model
 * Ensure that you are in **scripts** subfolder
   ```sh
-  cd scripts
+  cd DSA4262_gartic/scripts
   ```
 * Run the training script to start training the Random Forest Classifier
   ```
