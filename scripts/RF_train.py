@@ -20,13 +20,13 @@ val_data  = pd.read_csv('../Data/val_data.csv')
 
 # Drop features that are not needed / redundant
 # Split into X and y (Features and Label)
-X_train = train_data.drop(columns=['label','gene_id','transcript_id','Key','gene_id_encoded'])
+X_train = train_data.drop(columns=['label','gene_id','transcript_id','Key','ENST_ID'])
 y_train = train_data['label']
 
-X_val = val_data.drop(columns=['label','gene_id','transcript_id','Key','gene_id_encoded'])
+X_val = val_data.drop(columns=['label','gene_id','transcript_id','Key','ENST_ID'])
 y_val = val_data['label']
 
-X_test = test_data.drop(columns=['label','gene_id','transcript_id','Key','gene_id_encoded'])
+X_test = test_data.drop(columns=['label','gene_id','transcript_id','Key','ENST_ID'])
 y_test = test_data['label']
 
 # Addressing class imbalance in the Dataset using SMOTE + class weight + scale
@@ -64,7 +64,7 @@ print(f"Test Accuracy: {test_accuracy:.2f}")
 
 # Saving the trained Model
 dirname = os.path.dirname(__file__) # Path to this train.py
-filename = os.path.join(dirname, '../model/random_forest.joblib') # Relative path to model folder
+filename = os.path.join(dirname, '../model/Random_Forest_v2.joblib.joblib') # Relative path to model folder
 joblib.dump(rf, filename, compress=9)
 
 # Saving Standard Scaler for future Predictions
