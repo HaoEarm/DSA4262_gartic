@@ -72,7 +72,6 @@ After creating your AWS EC2 instance,
    ```sh
    git clone https://github.com/HaoEarm/DSA4262_gartic.git
    ```
-
 <!-- USAGE -->
 
 ## Usage
@@ -88,23 +87,28 @@ After creating your AWS EC2 instance,
   ```
   python3 RF_train.py
   ```
-* After successful execution, run the prediction script on the test data set
+
+
+### Predicting on a test dataset
+The **model** folder already has a saved model inside, and can be loaded to run predictions for m6A probabilities on a test data set, which is also provided in this repository.
+*In the **scripts** subfolder, run the script to predict m6A probabilities on a test data set
   ```
   python3 RF_test.py
   ```
 * A **test_output.csv** should have been created in the **output** subfolder
 * In the **output** folder, examine the output prediction file
   ```
-  cd ../output/
+  cd ../output
   head test_output.csv
   ```
   
 ### Running predictions
 * To run predictions on other datasets,  
-  1.Run the Data Parsing Scripts on the new raw dataset  
-  2.Train / Load a pre-trained model  
-  3.Modify RF_predict.py and ensure the filepath and name are correct based on the new input data files, Specifically the line:
-  
+  1. Run the Data Parsing Scripts on the new raw dataset  
+  2. Train / Load a pre-trained model  
+  3. Modify RF_predict.py and ensure the filepath and name are correct based on the new input data files, Specifically the line:
+  ```
     	# Reading in the parsed data
         df = pd.read_csv('../Data/test_data.csv') # Edit File name to relevant csv file
-  4.Run RF_predict.py and examine the output.csv in the output subfolder
+  ```
+  4. Run RF_predict.py and examine the output.csv in the **output** subfolder
