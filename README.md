@@ -91,7 +91,7 @@ After creating your AWS EC2 instance,
 
 ### Predicting on a test dataset
 The **model** folder already has a saved model inside, and can be loaded to run predictions for m6A probabilities on a test data set, which is also provided in this repository.
-*In the **scripts** subfolder, run the script to predict m6A probabilities on a test data set
+In the **scripts** subfolder, run the script to predict m6A probabilities on a test data set
   ```
   python3 RF_test.py
   ```
