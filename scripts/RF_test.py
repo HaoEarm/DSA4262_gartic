@@ -10,7 +10,7 @@ import os
 
 # Loading the pretrained Random Forest Model
 dirname = os.path.dirname(__file__) # Path to this test.py
-filename = os.path.join(dirname, '../model/random_forest.joblib') # Relative path to model folder
+filename = os.path.join(dirname, '../model/Random_Forest_v2.joblib') # Relative path to model folder
 rf = joblib.load(filename)
 
 # Loading scaler used from training
@@ -21,7 +21,7 @@ scaler = joblib.load(filename2)
 df = pd.read_csv('../Data/test_data.csv') # Uses the original test data from Task 1
 
 # Drop features that are not needed / redundant
-X = df.drop(columns=['label','gene_id','transcript_id','Key','gene_id_encoded'])
+X = df.drop(columns=['label','gene_id','transcript_id','Key','ENST_ID'])
 
 # Scale new input data
 X_scaled = scaler.transform(X)
