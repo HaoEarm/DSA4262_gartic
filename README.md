@@ -91,7 +91,7 @@ After creating your AWS EC2 instance,
   
 * Run the data processing script to process the parsed data and data labels
   ```sh
-  python3 # data_processing_updated.py
+  python3 data_processing_updated.py
   ```
   
 ### Training the model
