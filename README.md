@@ -33,7 +33,7 @@ GitHub repository for our group's DSA4262 Project. Our group has chosen to use a
 
 ## Getting Started
 
-Below are instructions to install the software on an AWS Ubuntu machine.
+Below are instructions to install the software on an AWS Ubuntu machine. When starting your AWS Ubuntu instance, we recommend an Instance Type of at least t3.xlarge.
 
 ### Prerequisites
 After creating your AWS EC2 instance, 
