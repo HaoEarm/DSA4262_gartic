@@ -15,7 +15,7 @@
     </li>
     <li><a href="#usage">Usage</a></li>
       <ul>
-        <li>Parsing the data</a></li>
+        <li>Data parsing and processing</a></li>
         <li>Training the model</a></li>
         <li>Running predictions</a></li>
       </ul>
