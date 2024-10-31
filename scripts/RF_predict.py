@@ -16,7 +16,7 @@ filename2 = os.path.join(dirname, '../model/scaler.joblib') # Relative path to m
 scaler = joblib.load(filename2)
 
 # Reading in the parsed data
-df = pd.read_csv('../data/test_data.csv') # Edit File name to relevant csv file
+df = pd.read_csv('../Data/test_data_updated.csv') # Edit File name to relevant csv file
 
 # Drop features that are not needed / redundant
 X = df.drop(columns=['label','gene_id','transcript_id','Key','ENST_ID'])
