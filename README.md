@@ -85,7 +85,7 @@ After creating your AWS EC2 instance,
   cd DSA4262_gartic/scripts
   ```
 
-* Due to file size limitations, this repository is unable to host the dataset0 for the parsing and processing scripts to run on. You do not need to run the parsing scripts to run the method (prediction script) on a test data set which is provided for the method in the next section.
+* Due to file size limitations, this repository is unable to host the dataset0 for the parsing and processing scripts to run on. You do not need to run the parsing scripts to run the method (prediction script) on a test data set which is provided for the method in the **Predicting on a dataset** section.
 
 * Please ensure the filepaths are correct based on your raw data, For example if using dataset0, you will need to update the input data files into the relevant lines of code in the script
 	```
