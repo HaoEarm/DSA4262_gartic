@@ -77,7 +77,7 @@ After creating your AWS EC2 instance,
 
 
 ## Usage
-* Please retrieve a raw dataset and upload it onto your AWS Instance. For the demostration in this repository, all of the scripts were ran on dataset0 as provided in DSA4262 Canvas Module.
+* For the demostration in this repository, all of the scripts were ran on dataset0 as provided in DSA4262 Canvas Module.
 
 ### Data parsing and processing
 * Ensure that you are in **scripts** subfolder
@@ -85,7 +85,7 @@ After creating your AWS EC2 instance,
   cd DSA4262_gartic/scripts
   ```
 
-* Due to file size limitations, this repository is unable to host the entire dataset0 for the scripts to run on.  data_parsing_updated.py will be missing dataset0.json as a input, unless you upload it into your instance by yourself.
+* Due to file size limitations, this repository is unable to host the dataset0 for the parsing and processing scripts to run on. You do not need to run the parsing scripts to run the method (prediction script) on a test data set which is provided for the method in the next section.
 
 * Please ensure the filepaths are correct based on your raw data, For example if using dataset0, you will need to update the input data files into the relevant lines of code in the script
 	```
@@ -93,14 +93,13 @@ After creating your AWS EC2 instance,
 	Input Data: dataset0.json, data_info_labelled.csv
 	Outputs: parsed_json.csv
 	```
-* A sample parsed_json.csv that is needed for next few scripts has been provided, and was obtained by running data_parsing_updated.py on dataset0.
 
-* If you do not intend on using the data already provided in this repository, run the data parsing script to read the json file
+* Run the data parsing script to read the json file
   ```sh
   python3 data_parsing_updated.py
   ```
   
-* After running the previous script on your own data OR using the provided datafile parsed_json.csv in this repository, run the data processing script to process the parsed data and data labels
+* Run the data processing script to process the parsed data and data labels
   ```sh
   python3 data_processing_updated.py
   ```
@@ -112,7 +111,7 @@ After creating your AWS EC2 instance,
   ```
 * A model will be saved in the *model* subfolder and can be loaded to run predictions.
 
-### Predicting on a test dataset
+### Predicting on a dataset
 
 The **model** folder already has a saved model inside, and can be loaded to run predictions for m6A probabilities on a test data set, which is also provided in this repository.
 In the **scripts** subfolder, run the script to predict m6A probabilities on the provided test data set
@@ -129,7 +128,7 @@ In the **scripts** subfolder, run the script to predict m6A probabilities on the
   
 ### Running predictions (In a Nutshell)
 * To run predictions on a dataset,  
-  1. Run the Data Parsing Scripts on the new raw dataset  
+  1. Run the Data Parsing Scripts on the dataset  
   2. Train / Load a pre-trained model  
   3. Modify RF_predict.py and ensure the filepath and name are correct based on the input data files
   4. Run RF_predict.py and examine the output.csv in the **output** subfolder
